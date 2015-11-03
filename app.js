@@ -27,15 +27,15 @@ var pikePlace = {
   //   for (var i = 0; i < this.hourlyTls.length; this.dailyTls += this.hourlyTls[i++]);
   // },
 
-// display: function() {
-//     for (var i = 0; i < hoursOfOperation.length; i++){
-//     var displayTotals = document.getElementById('pikePlaceList');
-//     var listItem = document.createElement('li');
-//     listItem.innerHTML = hoursOfOperation[i] + ": " + this.hourlyTls[i]pikePlacelist.appendChild(listItem);
+display: function() {
+    for (var i = 0; i < hoursOfOperation.length; i++){
+    var displayTotals = document.getElementById('pikePlaceList');
+    var listItem = document.createElement('li');
+    listItem.innerHTML = hoursOfOperation[i] + ": " + this.hourlyTls[i]pikePlacelist.appendChild(listItem);
 
-//     document.body.appendChild(hoursOfOperation);
-//     }
-//   }
+    document.body.appendChild(hoursOfOperation);
+    }
+  }
 
 }
 
@@ -48,7 +48,7 @@ var pikePlace = {
 //       console.log(this.dailyTls);
 pikePlace.calHrTl();
 // pikePlace.calTotal();
-// pikePlace.display();
+pikePlace.display();
 console.log(pikePlace.hourlyTls);
 console.log(pikePlace.dailyTls);
 
