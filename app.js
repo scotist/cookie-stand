@@ -71,21 +71,62 @@ var dailyTotal = document.createElement('th');
   headerRow.appendChild(dailyTotal);
   tbl.appendChild(headerRow);
 
-pikePlace.display();
-seaTac.display();
-southCenter.display();
-bellevue.display();
-alki.display();
+
+
+// pikePlace.display();
+// seaTac.display();
+// southCenter.display();
+// bellevue.display();
+// alki.display();
 
 
 // // harvest field data via event.target.minCust.value, put that into the constructor:
 
-// function displayAllLocations(){
-//   for (var i = 0; i < location.length; i++) {
-//     location[i].display();
-// }
+function displayAllLocations(){
+  for (var i = 0; i < locations.length; i++) {
+    locations[i].display();
+  }
 
-// }
+}
+displayAllLocations();
+
   document.body.appendChild(tbl);
 
-// displayAllLocations();
+// ++++++++++++++
+
+
+
+var newStandForm = document.getElementById("new-cookie-stand");
+console.log(newStandForm);
+
+
+var handleNewStand = function(event) {
+  console.log(handleNewStand);
+  event.preventDefault();
+
+  if(!event.target.standname.value || !event.target.min.value || !event.target.max.value || !event.target.avg.value){
+      return alert("You must fill in all the fields!");
+}
+
+
+var standName = event.target.standname.value;
+var min = event.target.min.value;
+var max = event.target.max.value;
+var avg = Number(event.target.avg.value);
+
+var newStand = new CookieStand(standName, min, max, avg);
+
+event.target.standname.value = null;
+event.target.min.value = null;
+event.target.max.value = null;
+event.target.avg.value = null;
+
+locations.push(newStand);
+
+newStand.display();
+
+
+};
+
+
+newStandForm.addEventListener('submit', handleNewStand);
