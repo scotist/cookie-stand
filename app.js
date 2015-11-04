@@ -44,37 +44,6 @@ this.calHrTl();
       tbl.appendChild(row);
   }
 
-//   this.calHrTl();
-//   var tbl = document.createElement('table'); //move
-//   var trElement = document.createElement('tr');
-//     for (var i = 0; i < this.hourlyTls.length; i++){
-//        var thElement = document.createElement('th');
-//       thElement.textContent = hoursOfOperation[i];
-//       trElement.appendChild(thElement);
-
-// }
-//       tbl.appendChild(trElement);
-//   var trElement = document.createElement('tr');
-//   var tdElement = document.createElement('td');
-//       tdElement.textContent = this.storeName;
-//       trElement.appendChild(tdElement);
-//       tbl.appendChild(trElement);
-
-//       for (var i = 1; i < 9; i++) {
-//         var tdElement = document.createElement('td');
-//         tdElement.textContent = this.hourlyTls[i];
-//         trElement.appendChild(tdElement);
-//       }
-
-  // var trElement = document.createElement('tr');
-  // var tdElement = document.createElement('td');
-  //     tdElement.textContent = this.dailyTls;
-  //     trElement.appendChild(tdElement);
-  //     tbl.appendChild(trElement);
-
-  // document.body.appendChild(tbl);
-
-  // }
 
 }
 
