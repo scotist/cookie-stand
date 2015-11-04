@@ -108,6 +108,9 @@ southCenter.display();
 bellevue.display();
 alki.display();
 
+
+// // harvest field data via event.target.minCust.value, put that into the constructor:
+
 // function displayAllLocations(){
 //   for (var i = 0; i < location.length; i++) {
 //     location[i].display();
