@@ -22,8 +22,25 @@ for (var i = 0; i < hoursOfOperation.length; i++){
 };
 
 this.display = function () {
+  // ** alternative (non-working) code for table **
+//   var hourTr = document.createElement('tr');
+//   hourTable.appendChild(hourTr);
+//   var hourTd = document.createElement('td');
+//   hourTd.innerHTML = this.name; // do I need this?
+//   hourTr.appendChild(hourTd);
+
+//   for (var i = 0; i < hoursOfOperation.length; i++){
+//     var hourTd = document.createElement('td');
+//     hourTd.innerHTML = this.hourlyTls[i];
+//     hourTr.appendChild(hourTd);
+//   }
+
+//   var hourTd = document.createElement('td');
+//   hourTd.innerHTML = this.dailyTls;
+//   hourTr.appendChild(hourTd);
+// };
   this.calHrTl();
-  var tbl = document.createElement('table');
+  var tbl = document.createElement('table'); //move
   var trElement = document.createElement('tr');
     for (var i = 0; i < this.hourlyTls.length; i++){
        var thElement = document.createElement('th');
@@ -62,6 +79,27 @@ var seaTac = new CookieStand("SeaTac Airport", 6, 44, 1.2);
 var southCenter = new CookieStand("Southcenter Mall", 11, 38, 1.9);
 var bellevue = new CookieStand("Bellevue Square", 20, 48, 3.3);
 var alki = new CookieStand("Alki", 3, 24, 2.6);
+
+// *** additional alternative (non-working) code to put nonrepeating
+// table elements outside constructor ***
+// var location = [pikePlace, seaTac, southCenter, bellevue, alki];
+
+// var hourTable = document.createElement('table');
+// document.body.appendChild(hourTable);
+// var hourTr = document.createElement('tr');
+// hourTable.appendChild(hourTr);
+// var hourTh = document.createElement('th');
+// hourTr.appendChild(hourTh);
+
+// for (var i = 0; i < hoursOfOperation.length; i++) {
+//   var hourTh = document.createElement('th');
+//   hourTh.innerHTML = hoursOfOperation[i];
+//   hourTr.appendChild(hourTh);
+// }
+
+// var hourTh = document.createElement('th');
+// hourTh.innerHTML = 'Total';
+// hourTr.appendChild(hourTh);
 
 pikePlace.display();
 seaTac.display();
