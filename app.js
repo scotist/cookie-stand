@@ -1,30 +1,27 @@
-
 var hoursOfOperation = ["Locations", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "Total"];
-var locations = [pikePlace];
 
-var pikePlace = {
-  storeName: "Pike Place",
-  minCustHr: 17,
-  maxCustHr: 67,
-  avePerCust: 3.9,
-  hourlyTls: [],
-  dailyTls: 0,
+function CookieStand(storeName, minCustHr, maxCustHr, avePerCust) {
+  this.storeName = storeName;
+  this.minCustHr = minCustHr;
+  this.maxCustHr = maxCustHr;
+  this.avePerCust = avePerCust;
+  this.hourlyTls = [];
+  this.dailyTls = 0;
 
-  calRanCust: function() {
-    return Math.floor(Math.random() * (this.maxCustHr - this.minCustHr +1)) + this.minCustHr;
-  },
+this.calRanCust = function () {
+  return Math.floor(Math.random() * (this.maxCustHr - this.minCustHr + 1)) + this.minCustHr;
+};
 
-  calHrTl: function() {
-    for (var i = 0; i < hoursOfOperation.length; i++){
+this.calHrTl = function() {
+for (var i = 0; i < hoursOfOperation.length; i++){
       var hourly = this.calRanCust() * this.avePerCust;
       this.hourlyTls.push(Math.ceil(hourly));
       this.dailyTls += this.hourlyTls[i];
       console.log(i);
-    }
+    };
+};
 
-  },
-
-display: function() {
+this.display = function () {
   this.calHrTl();
   var tbl = document.createElement('table');
   var trElement = document.createElement('tr');
@@ -56,10 +53,22 @@ display: function() {
   document.body.appendChild(tbl);
 
   }
+
 }
 
+
+var pikePlace = new CookieStand("Pike Place Market", 17, 88, 5.2);
+
+var seaTac = new CookieStand("SeaTac Airport", 6, 44, 1.2);
+
+var southCenter = new CookieStand("Southcenter Mall", 11, 38, 1.9);
+
+var bellevue = new CookieStand("Bellevue Square", 20, 48, 3.3);
+
+var alki = new CookieStand("Alki", 3, 24, 2.6);
+
 pikePlace.display();
-console.log(pikePlace.hourlyTls);
-console.log(pikePlace.dailyTls);
-
-
+seaTac.display();
+southCenter.display();
+bellevue.display();
+alki.display();
