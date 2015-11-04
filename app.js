@@ -17,7 +17,7 @@ for (var i = 0; i < hoursOfOperation.length; i++){
       var hourly = this.calRanCust() * this.avePerCust;
       this.hourlyTls.push(Math.ceil(hourly));
       this.dailyTls += this.hourlyTls[i];
-      console.log(i);
+      console.log('Total cookies at ' + hoursOfOperation[i] + ': ' + this.dailyTls);
     };
 };
 
@@ -58,13 +58,9 @@ this.display = function () {
 
 
 var pikePlace = new CookieStand("Pike Place Market", 17, 88, 5.2);
-
 var seaTac = new CookieStand("SeaTac Airport", 6, 44, 1.2);
-
 var southCenter = new CookieStand("Southcenter Mall", 11, 38, 1.9);
-
 var bellevue = new CookieStand("Bellevue Square", 20, 48, 3.3);
-
 var alki = new CookieStand("Alki", 3, 24, 2.6);
 
 pikePlace.display();
