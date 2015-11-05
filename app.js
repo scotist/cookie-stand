@@ -43,8 +43,6 @@ this.calHrTl();
       row.appendChild(totalCookies);
       tbl.appendChild(row);
   }
-
-
 }
 
 var pikePlace = new CookieStand("Pike Place Market", 17, 88, 5.2);
@@ -60,9 +58,9 @@ var emptyCell = document.createElement('td');
   headerRow.appendChild(emptyCell);
 
   for (var i = 0; i < hoursOfOperation.length; i++) {
-  var td = document.createElement('td');
-  td.innerHTML = hoursOfOperation[i];
-  headerRow.appendChild(td);
+    var td = document.createElement('td');
+    td.innerHTML = hoursOfOperation[i];
+    headerRow.appendChild(td);
 };
 
 var dailyTotal = document.createElement('th');
@@ -74,24 +72,20 @@ function displayAllLocations(){
   for (var i = 0; i < locations.length; i++) {
     locations[i].display();
   }
-
 }
 
 displayAllLocations();
 
 document.body.appendChild(tbl);
 
-
 var newStandForm = document.getElementById("new-cookie-stand");
-console.log(newStandForm);
 
 var handleNewStand = function(event) {
-  console.log(handleNewStand);
   event.preventDefault();
 
   if(!event.target.standname.value || !event.target.min.value || !event.target.max.value || !event.target.avg.value){
       return alert("You must fill in all the fields!");
-}
+  }
 
 var standName = event.target.standname.value;
 var min = event.target.min.value;
@@ -108,8 +102,6 @@ event.target.avg.value = null;
 locations.push(newStand);
 
 newStand.display();
-
 };
-
 
 newStandForm.addEventListener('submit', handleNewStand);
