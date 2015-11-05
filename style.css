@@ -1,34 +1,26 @@
-* {
-  background-color:  CornflowerBlue;
+body{
+  background-color: #F7F7F7;
+  background-image: url('soundsunset.jpg');
+  background-size: 1200px;
+}
+#update{
+  background-color: rgba(246, 246, 246, .75);
+  width: 250px;
+  height: 250px;
+  top: 250px;
+  left: 150px;
+  border-style: hidden;
+  position: absolute;
 }
 
-body {
-  background-image: url("soundsunset.jpg");
+#cookieTable{
+  position: fixed;
+  top: 300px;
+  right: 150px;
+  vertical-align: middle;
+  background-color: rgba(247, 247, 247, .75 );
+  color: #30323D;
+  text-align: center;
+  font-family: Helvetica, Verdana, sans-serif;
 }
 
-header {
-  color: LightCyan;
-  margin: 0px;
-  padding: 40px;
-  background-color: #A1A09B;
-  font-weight: bold;
-  font-size: 40px;
-}
-
-table {
-
-  display: inline-block;
-  font-family: 'Ubuntu', sans-serif;
-  padding: 2%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 4%;
-  margin-bottom: 4%;
-  border-radius: 5px;
-  background-color: LightCyan;
-  color: LightGray;
-  }
-
-form {
-  background-color: white;
-}
