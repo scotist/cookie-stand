@@ -47,7 +47,6 @@ this.calHrTl();
 
 }
 
-
 var pikePlace = new CookieStand("Pike Place Market", 17, 88, 5.2);
 var seaTac = new CookieStand("SeaTac Airport", 6, 44, 1.2);
 var southCenter = new CookieStand("Southcenter Mall", 11, 38, 1.9);
@@ -71,34 +70,20 @@ var dailyTotal = document.createElement('th');
   headerRow.appendChild(dailyTotal);
   tbl.appendChild(headerRow);
 
-
-
-// pikePlace.display();
-// seaTac.display();
-// southCenter.display();
-// bellevue.display();
-// alki.display();
-
-
-// // harvest field data via event.target.minCust.value, put that into the constructor:
-
 function displayAllLocations(){
   for (var i = 0; i < locations.length; i++) {
     locations[i].display();
   }
 
 }
+
 displayAllLocations();
 
-  document.body.appendChild(tbl);
-
-// ++++++++++++++
-
+document.body.appendChild(tbl);
 
 
 var newStandForm = document.getElementById("new-cookie-stand");
 console.log(newStandForm);
-
 
 var handleNewStand = function(event) {
   console.log(handleNewStand);
@@ -107,7 +92,6 @@ var handleNewStand = function(event) {
   if(!event.target.standname.value || !event.target.min.value || !event.target.max.value || !event.target.avg.value){
       return alert("You must fill in all the fields!");
 }
-
 
 var standName = event.target.standname.value;
 var min = event.target.min.value;
@@ -124,7 +108,6 @@ event.target.avg.value = null;
 locations.push(newStand);
 
 newStand.display();
-
 
 };
 

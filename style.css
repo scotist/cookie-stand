@@ -1,3 +1,15 @@
 * {
-  background-color: light blue;
+  background-color:  CornflowerBlue;
+}
+
+body {
+  background-image: url("soundsunset.jpg");
+}
+
+table {
+  color: white;
+}
+
+form {
+  background-color: white;
 }
