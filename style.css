@@ -5,7 +5,7 @@
 
 body {
   background-color: Lightgray;
-  background-image: url('soundsunset.jpg');
+  background-image: url('images/soundsunset.jpg');
   background-size: 1200px;
   background-repeat: no-repeat;
 }
@@ -31,8 +31,8 @@ header img {
   float: left;
  }
 
- h3 {
-color: Black;
+h3 {
+  color: Black;
   text-shadow: 2px 2px 8px #FF0000; }
 
 ul {
@@ -43,12 +43,12 @@ ul {
   padding: 30px;
 }
 
- #family {
+#family {
   float:right;
   max-width: 550px;
  }
 
- #aboutus {
+#aboutus {
   font-family: 'Lora', serif;
   font-weight: 300;
   width: 50%;
@@ -98,6 +98,10 @@ label, input, button {
   width: 200px;
 }
 
+#sans {
+  font-family: Helvetica;
+}
+
 #SandyBrown {
   background-color: SandyBrown;
 }
@@ -116,4 +120,9 @@ label, input, button {
   background-color: rgba(247, 247, 247, .55 );
 }
 
+/*#container {
+*//*  display: flex;
+*//*  flex-flow: row wrap;
+*//*  justify-content: center;
+*/}
 

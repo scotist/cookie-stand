@@ -15,33 +15,31 @@ this.calRanCust = function () {
 };
 
 this.calHrTl = function() {
-for (var i = 0; i < hoursOfOperation.length; i++){
-      var hourly = this.calRanCust() * this.avePerCust;
-      this.hourlyTls.push(Math.ceil(hourly));
-      this.dailyTls += this.hourlyTls[i];
-      console.log('Total cookies at ' + hoursOfOperation[i] + ': ' + this.dailyTls);
-    };
+  for (var i = 0; i < hoursOfOperation.length; i++){
+    var hourly = this.calRanCust() * this.avePerCust;
+    this.hourlyTls.push(Math.ceil(hourly));
+    this.dailyTls += this.hourlyTls[i];
+    console.log('Total cookies at ' + hoursOfOperation[i] + ': ' + this.dailyTls);
+  };
 };
 
 this.display = function () {
+  this.calHrTl();
+  var row = document.createElement('tr');
+  var location = document.createElement('th');
+  location.textContent = this.storeName;
+  row.appendChild(location);
 
-this.calHrTl();
-
-    var row = document.createElement('tr');
-    var location = document.createElement('th');
-    location.textContent = this.storeName;
-    row.appendChild(location);
-
-    for(var i = 0; i < hoursOfOperation.length; i++){
+  for(var i = 0; i < hoursOfOperation.length; i++){
       var numCookie = document.createElement('td');
       numCookie.textContent = this.hourlyTls[i];
       row.appendChild(numCookie);
       tbl.appendChild(row);
     }
-      var totalCookies = document.createElement('td');
-      totalCookies.textContent = this.dailyTls;
-      row.appendChild(totalCookies);
-      tbl.appendChild(row);
+  var totalCookies = document.createElement('td');
+  totalCookies.textContent = this.dailyTls;
+  row.appendChild(totalCookies);
+  tbl.appendChild(row);
   }
 }
 
@@ -61,7 +59,7 @@ var emptyCell = document.createElement('td');
     var td = document.createElement('td');
     td.innerHTML = hoursOfOperation[i];
     headerRow.appendChild(td);
-};
+  };
 
 var dailyTotal = document.createElement('th');
   dailyTotal.textContent = "Total";
@@ -82,7 +80,6 @@ var newStandForm = document.getElementById("new-cookie-stand");
 
 var handleNewStand = function(event) {
   event.preventDefault();
-
   if(!event.target.standname.value || !event.target.min.value || !event.target.max.value || !event.target.avg.value){
       return alert("You must fill in all the fields!");
   }
