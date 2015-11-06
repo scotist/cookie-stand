@@ -73,6 +73,8 @@ border-width: 10px;
   margin-right: 200px;
  }
 
+
+
 form {
   border: transparent;
 }
@@ -92,5 +94,22 @@ label, input, button {
   width: 200px;
 }
 
+#SandyBrown {
+  background-color: SandyBrown;
+}
+
+#Lightgray {
+  background-color: Lightgray;
+
+}
+
+#Black {
+  background-color: Black;
+}
+
+#center {
+  text-align: center;
+  background-color: rgba(247, 247, 247, .55 );
+}
 
 
