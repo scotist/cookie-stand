@@ -35,6 +35,10 @@ header img {
 color: Black;
   text-shadow: 2px 2px 8px #FF0000; }
 
+ul {
+  list-style-type: circle;
+}
+
 #logo {
   padding: 30px;
 }
