@@ -43,41 +43,7 @@ this.calHrTl();
       row.appendChild(totalCookies);
       tbl.appendChild(row);
   }
-
-//   this.calHrTl();
-//   var tbl = document.createElement('table'); //move
-//   var trElement = document.createElement('tr');
-//     for (var i = 0; i < this.hourlyTls.length; i++){
-//        var thElement = document.createElement('th');
-//       thElement.textContent = hoursOfOperation[i];
-//       trElement.appendChild(thElement);
-
-// }
-//       tbl.appendChild(trElement);
-//   var trElement = document.createElement('tr');
-//   var tdElement = document.createElement('td');
-//       tdElement.textContent = this.storeName;
-//       trElement.appendChild(tdElement);
-//       tbl.appendChild(trElement);
-
-//       for (var i = 1; i < 9; i++) {
-//         var tdElement = document.createElement('td');
-//         tdElement.textContent = this.hourlyTls[i];
-//         trElement.appendChild(tdElement);
-//       }
-
-  // var trElement = document.createElement('tr');
-  // var tdElement = document.createElement('td');
-  //     tdElement.textContent = this.dailyTls;
-  //     trElement.appendChild(tdElement);
-  //     tbl.appendChild(trElement);
-
-  // document.body.appendChild(tbl);
-
-  // }
-
 }
-
 
 var pikePlace = new CookieStand("Pike Place Market", 17, 88, 5.2);
 var seaTac = new CookieStand("SeaTac Airport", 6, 44, 1.2);
@@ -92,9 +58,9 @@ var emptyCell = document.createElement('td');
   headerRow.appendChild(emptyCell);
 
   for (var i = 0; i < hoursOfOperation.length; i++) {
-  var td = document.createElement('td');
-  td.innerHTML = hoursOfOperation[i];
-  headerRow.appendChild(td);
+    var td = document.createElement('td');
+    td.innerHTML = hoursOfOperation[i];
+    headerRow.appendChild(td);
 };
 
 var dailyTotal = document.createElement('th');
@@ -102,21 +68,40 @@ var dailyTotal = document.createElement('th');
   headerRow.appendChild(dailyTotal);
   tbl.appendChild(headerRow);
 
-pikePlace.display();
-seaTac.display();
-southCenter.display();
-bellevue.display();
-alki.display();
+function displayAllLocations(){
+  for (var i = 0; i < locations.length; i++) {
+    locations[i].display();
+  }
+}
 
+displayAllLocations();
 
-// // harvest field data via event.target.minCust.value, put that into the constructor:
+document.body.appendChild(tbl);
 
-// function displayAllLocations(){
-//   for (var i = 0; i < location.length; i++) {
-//     location[i].display();
-// }
+var newStandForm = document.getElementById("new-cookie-stand");
 
-// }
-  document.body.appendChild(tbl);
+var handleNewStand = function(event) {
+  event.preventDefault();
 
-// displayAllLocations();
+  if(!event.target.standname.value || !event.target.min.value || !event.target.max.value || !event.target.avg.value){
+      return alert("You must fill in all the fields!");
+  }
+
+var standName = event.target.standname.value;
+var min = event.target.min.value;
+var max = event.target.max.value;
+var avg = Number(event.target.avg.value);
+
+var newStand = new CookieStand(standName, min, max, avg);
+
+event.target.standname.value = null;
+event.target.min.value = null;
+event.target.max.value = null;
+event.target.avg.value = null;
+
+locations.push(newStand);
+
+newStand.display();
+};
+
+newStandForm.addEventListener('submit', handleNewStand);

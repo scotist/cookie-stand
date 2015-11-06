@@ -1,3 +1,115 @@
 * {
-  background-color: light blue;
+  font-family: 'Slabo 27px', serif;
+  font-family: 'Lora', serif;
 }
+
+body {
+  background-color: Lightgray;
+  background-image: url('soundsunset.jpg');
+  background-size: 1200px;
+  background-repeat: no-repeat;
+}
+
+#fishlogo {
+   display: block;
+  max-width:230px;
+  max-height:95px;
+  width: auto;
+  height: auto;
+}
+
+header {
+  font-family: serif;
+  font-size: 20px;
+  display: block;
+  color: SandyBrown;
+  text-shadow: 2px 2px 8px #FF0000;
+  opacity: 0.6;
+}
+
+header img {
+  float: left;
+ }
+
+ h3 {
+color: Black;
+  text-shadow: 2px 2px 8px #FF0000; }
+
+#logo {
+  padding: 30px;
+}
+
+ #family {
+  float:right;
+  max-width: 550px;
+ }
+
+ #aboutus {
+  font-family: 'Lora', serif;
+  font-weight: 300;
+  width: 50%;
+  float: left;
+  margin-left: 50px;
+  margin-top: 150px;
+  padding:10px 20px;
+  font-size: 18px;
+  background-color: Lightgray;
+  border-radius: 10px;
+  letter-spacing: .5px;
+ }
+
+#locations {
+margin-left: 30px;
+}
+
+#merch {
+color: white;
+border-width: 10px;
+}
+
+#Fishes {
+  float: right;
+  margin-top: 170px;
+  margin-right: 200px;
+ }
+
+
+
+form {
+  border: transparent;
+}
+
+table {
+  top: 300px;
+  right: 150px;
+  vertical-align: middle;
+  background-color: rgba(247, 247, 247, .55 );
+  color: #30323D;
+  text-align: center;
+  font-family: Helvetica, Verdana, sans-serif;
+  padding: 2%;
+}
+
+label, input, button {
+  width: 200px;
+}
+
+#SandyBrown {
+  background-color: SandyBrown;
+}
+
+#Lightgray {
+  background-color: Lightgray;
+
+}
+
+#Black {
+  background-color: Black;
+}
+
+#center {
+  text-align: center;
+  background-color: rgba(247, 247, 247, .55 );
+}
+
+
