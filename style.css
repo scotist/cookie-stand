@@ -22,7 +22,8 @@ header {
   font-family: serif;
   font-size: 20px;
   display: block;
-  color: SandyBrown;
+  color: Black;
+  background-color: White;
   text-shadow: 2px 2px 8px #FF0000;
   opacity: 0.6;
 }
@@ -119,7 +120,6 @@ label, input, button {
   text-align: center;
   background-color: rgba(247, 247, 247, .55 );
 }
-// ++++++++++++++++ transition stuff below
 
 .original {
   background: #eaeaed;
@@ -154,7 +154,6 @@ label, input, button {
   transform: perspective(200px) translateZ(-50px);
 }
 
-// +++++++++++++++++ Second set of transition stuff below
 
 .card-container {
   cursor: pointer;
